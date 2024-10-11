@@ -1,0 +1,18 @@
+{
+    "name": "projeto/aplicacao",
+    "description": "Projeto da aplicacao web",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "App\\Classes\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Testes\\": "Testes/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^11.3"
+    }
+}
