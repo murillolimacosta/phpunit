@@ -1,5 +1,7 @@
 <?php
 
+namespace Classes;
+
 class Conversor
 {
     public function converterMetrosParaQuilometros(float $metros): float

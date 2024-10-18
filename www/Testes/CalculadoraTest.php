@@ -1,38 +1,38 @@
-<?php 
+<?php
+
+namespace App\Tests;
 
 use PHPUnit\Framework\TestCase;
-require 'Classes/Calculadora.class.php';
+use App\Classes\Calculadora;
 
-class CalculadoraTest extends TestCase {
+class CalculadoraTest extends TestCase
+{
+    protected $calculadora;
 
-    private Calculadora $calculadora;
-
-    protected function setUp(): void  {
+    protected function setUp(): void
+    {
         $this->calculadora = new Calculadora();
     }
 
-    public function testSomar(): void {
-
-        $resultado = $this->calculadora->somar(4.3,3.5);
-        $this->assertEquals(7.8, $resultado);
+    public function testSomar()
+    {
+        $this->assertEquals(5, $this->calculadora->somar(2, 3));
     }
 
-    public function testSubtrair(): void {
-
-        $resultado = $this->calculadora->subtrair(4,3);
-        $this->assertEquals(1, $resultado);
+    public function testSubtrair()
+    {
+        $this->assertEquals(1, $this->calculadora->subtrair(3, 2));
     }
 
-    public function testMultiplicar(): void {
-
-        $resultado = $this->calculadora->multiplicar(3,6);
-        $this->assertEquals(18, $resultado);
+    public function testMultiplicar()
+    {
+        $this->assertEquals(6, $this->calculadora->multiplicar(2, 3));
     }
 
-    public function testDividir(): void {
-
-        $resultado = $this->calculadora->dividir(12,3);
-        $this->assertEquals(4, $resultado);
+    public function testDividir()
+    {
+        $this->assertEquals(2, $this->calculadora->dividir(6, 3));
+        $this->expectException(\InvalidArgumentException::class);
+        $this->calculadora->dividir(6, 0); // Teste de divisão por zero
     }
-
 }

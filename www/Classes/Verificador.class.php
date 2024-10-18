@@ -1,5 +1,7 @@
 <?php
 
+namespace Classes;
+
 class Verificador
 {
     public function ePar(int $numero): bool

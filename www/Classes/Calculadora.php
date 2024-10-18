@@ -1,5 +1,7 @@
 <?php 
 
+namespace App\Classes;
+
 class Calculadora {
 
     public function somar(float $a, float $b): float 
@@ -19,8 +21,10 @@ class Calculadora {
 
     public function dividir(float $a, float $b): float 
     {
+        if ($b == 0) {
+            throw new \InvalidArgumentException("Divisão por zero não é permitida."); // Tratamento de divisão por zero
+        }
         return $a / $b;
     }
-
 
 }

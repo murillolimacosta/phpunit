@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-require 'Classes/CalculadoraBooleana.class.php';
+use App\Classes\CalculadoraBooleana;
 
 class CalculadoraBooleanaTest extends TestCase {
 

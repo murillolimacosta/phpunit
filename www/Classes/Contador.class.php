@@ -1,5 +1,7 @@
 <?php
 
+namespace Classes;
+
 class Contador
 {
     private $valor = 0;
